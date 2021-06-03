@@ -181,7 +181,7 @@ class _CartPageState extends State<CartPage> {
 
   Widget _buildBottomNavBar(BuildContext context) {
     return ElevatedButton(
-      onPressed: _addressController.text.isEmpty ? null : () => _order(context),
+      onPressed: _address.isEmpty ? null : () => _order(context),
       style: ElevatedButton.styleFrom(shape: BeveledRectangleBorder()),
       child: _isLoading ? CircularProgressIndicator() : Text('PLACE ORDER'),
     );
