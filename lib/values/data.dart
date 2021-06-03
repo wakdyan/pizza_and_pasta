@@ -1,6 +1,7 @@
-import 'package:submission/models/food.dart';
+import '../models/food.dart';
 
 const foodSizes = ['S', 'M', 'L'];
+const deliveryFee = 16000;
 
 final favoriteFoods = [
   Food(
@@ -9,7 +10,7 @@ final favoriteFoods = [
     name: 'Meat Lovers',
     tag: 'Pizza',
     description: '4 slices',
-    price: 'Rp58000',
+    price: 58000,
     rating: 4.6,
   ),
   Food(
@@ -18,7 +19,7 @@ final favoriteFoods = [
     name: 'Super Supreme Chicken',
     tag: 'Pizza',
     description: '8 slices',
-    price: 'Rp158000',
+    price: 158000,
     rating: 4.2,
   ),
   Food(
@@ -27,7 +28,7 @@ final favoriteFoods = [
     name: 'Tuna Melt',
     tag: 'Pizza',
     description: '6-8 slices',
-    price: 'Rp111000',
+    price: 111000,
     rating: 4.2,
   ),
 ];
@@ -40,7 +41,7 @@ final businessLunches = [
     tag: 'Pasta',
     description:
         'Pasta Spaghetti, Daging Sapi Cincang, Saus Tomat dan Keju Cheddar',
-    price: 'Rp50900',
+    price: 50900,
     rating: 4.2,
   ),
   Food(
@@ -50,7 +51,7 @@ final businessLunches = [
     tag: 'Pasta',
     description:
         'Spaghetti dengan potongan ayam panggang, disiram saus oriental yang pas manisnya',
-    price: 'Rp56000',
+    price: 56000,
     rating: 4.1,
   ),
   Food(
@@ -60,7 +61,7 @@ final businessLunches = [
     tag: 'Pasta',
     description:
         'Pasta Fettuccine, Bawang Bombay, Parika Merah, Paprika Hijau dan Saus Lada Hitam.',
-    price: 'Rp56000',
+    price: 56000,
     rating: 4.5,
   ),
 ];

@@ -5,6 +5,9 @@ class AppColor {
   static const onPrimary = Color(0xff503b26);
 
   static const accent = Color(0xff503b26);
+  static const onAccent = Color(0xfff9ce95);
+
+  static const accentLight = Color(0xff7d654e);
 
   static const surface = Colors.white;
   static const onSurface = Colors.black87;

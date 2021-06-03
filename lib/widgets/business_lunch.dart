@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/food.dart';
 import '../pages/detail_page.dart';
+import '../pages/home_page.dart';
 import '../themes/app_decoration.dart';
 import '../themes/app_text_style.dart';
 import '../values/data.dart';
@@ -92,7 +93,7 @@ class BusinessLunch extends StatelessWidget {
                 children: <Widget>[
                   Rating(food.rating),
                   Text(
-                    food.price,
+                    currency.format(food.price),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,

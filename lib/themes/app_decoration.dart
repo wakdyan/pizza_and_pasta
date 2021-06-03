@@ -15,28 +15,26 @@ final cardDecoration = BoxDecoration(
   ],
 );
 
-final selectedSizeDecoration = BoxDecoration(
+final selectedFoodSizeDecoration = BoxDecoration(
   color: AppColor.primary,
   borderRadius: BorderRadius.circular(sizeCardRadius),
   boxShadow: [
     BoxShadow(
       color: AppColor.primary,
-      offset: Offset(0, 0),
-      blurRadius: 8,
-      spreadRadius: 1,
+      offset: Offset(0, 4),
+      blurRadius: 6,
     ),
   ],
 );
 
-final unselectedSizeDecoration = BoxDecoration(
+final unselectedFoodSizeDecoration = BoxDecoration(
   color: AppColor.surface,
   borderRadius: BorderRadius.circular(sizeCardRadius),
   boxShadow: [
     BoxShadow(
       color: Colors.black12,
-      offset: Offset(0, 0),
-      blurRadius: 8,
-      spreadRadius: 1,
+      offset: Offset(0, 4),
+      blurRadius: 6,
     ),
   ],
 );

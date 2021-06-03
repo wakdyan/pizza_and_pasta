@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/food.dart';
 import '../pages/detail_page.dart';
+import '../pages/home_page.dart';
 import '../themes/app_decoration.dart';
 import '../themes/app_text_style.dart';
 import '../values/data.dart';
@@ -88,7 +89,7 @@ class FavoriteFood extends StatelessWidget {
         children: [
           TextSpan(
             text: 'dishes',
-            style: headerStyle.copyWith(fontSize: 21, color: Colors.grey),
+            style: headerStyle.copyWith(fontSize: 18, color: Colors.grey),
           ),
         ],
       ),
@@ -116,7 +117,7 @@ class FavoriteFood extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Rating(food.rating),
-                  Text(food.price, style: priceStyle)
+                  Text(currency.format(food.price), style: priceStyle)
                 ],
               )
             ],
