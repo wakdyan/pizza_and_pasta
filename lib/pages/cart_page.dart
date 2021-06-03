@@ -181,7 +181,7 @@ class _CartPageState extends State<CartPage> {
 
   Widget _buildBottomNavBar(BuildContext context) {
     return ElevatedButton(
-      onPressed: _address.isEmpty ? null : () => _order(context),
+      onPressed: _address == null ? null : () => _order(context),
       style: ElevatedButton.styleFrom(shape: BeveledRectangleBorder()),
       child: _isLoading ? CircularProgressIndicator() : Text('PLACE ORDER'),
     );
@@ -224,7 +224,7 @@ class _CartPageState extends State<CartPage> {
             ),
             trailing: TextButton(
               style: TextButton.styleFrom(primary: AppColor.accentLight),
-              child: Text('SELESAI'),
+              child: Text('CONFIRM'),
               onPressed: () {
                 if (_addressController.text.isNotEmpty) {
                   setState(() => _address = _addressController.text);
