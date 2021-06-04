@@ -1,3 +1,5 @@
+part of 'food.dart';
+
 class FoodSize {
   int quantity;
   String name;

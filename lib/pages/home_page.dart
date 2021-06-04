@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        key: ValueKey('cart_fab'),
         onPressed: () => _moveToCartPage(context),
         child: Icon(Icons.shopping_cart),
       ),

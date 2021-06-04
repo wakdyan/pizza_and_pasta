@@ -1,4 +1,4 @@
-import 'food_size.dart';
+part 'food_size.dart';
 
 class Food {
   int id;

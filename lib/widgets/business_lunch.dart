@@ -37,34 +37,41 @@ class BusinessLunch extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () => _moveToDetailPage(context, food),
-      child: Container(
-        height: businessCardHeight,
-        margin: const EdgeInsets.symmetric(horizontal: largePadding),
-        decoration: cardDecoration,
-        child: Row(
-          children: <Widget>[
-            _buildBusinessLunchInfo(food),
-            Expanded(
-              flex: 2,
-              child: ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  topRight: Radius.circular(cardRadius),
-                  bottomRight: Radius.circular(cardRadius),
-                ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      bottom: -30,
-                      child: SizedBox(
-                        height: (size.width - largePadding * 2) / 5 * 2 + 40,
-                        child: Image.asset(food.imageUrl, fit: BoxFit.cover),
-                      ),
+      child: Hero(
+        tag: food.id,
+        child: Material(
+          child: Container(
+            height: businessCardHeight,
+            margin: const EdgeInsets.symmetric(horizontal: largePadding),
+            decoration: cardDecoration,
+            child: Row(
+              children: <Widget>[
+                _buildBusinessLunchInfo(food),
+                Expanded(
+                  flex: 2,
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(cardRadius),
+                      bottomRight: Radius.circular(cardRadius),
                     ),
-                  ],
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          bottom: -30,
+                          child: SizedBox(
+                            height:
+                                (size.width - largePadding * 2) / 5 * 2 + 40,
+                            child:
+                                Image.asset(food.imageUrl, fit: BoxFit.cover),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

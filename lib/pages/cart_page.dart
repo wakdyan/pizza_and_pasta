@@ -116,7 +116,7 @@ class _CartPageState extends State<CartPage> {
   }
 
   Widget _buildPayment(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+    final _textTheme = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Column(
@@ -127,12 +127,12 @@ class _CartPageState extends State<CartPage> {
             children: [
               Text(
                 'Subtotal',
-                style: textTheme.caption,
+                style: _textTheme.caption,
                 strutStyle: StrutStyle(fontSize: 24),
               ),
               Text(
                 currency.format(_getCartPrice()),
-                style: textTheme.caption,
+                style: _textTheme.caption,
                 strutStyle: StrutStyle(fontSize: 24),
               ),
             ],
@@ -142,12 +142,12 @@ class _CartPageState extends State<CartPage> {
             children: [
               Text(
                 'Delivery Fee',
-                style: textTheme.caption,
+                style: _textTheme.caption,
                 strutStyle: StrutStyle(fontSize: 24),
               ),
               Text(
                 currency.format(deliveryFee),
-                style: textTheme.caption,
+                style: _textTheme.caption,
                 strutStyle: StrutStyle(fontSize: 24),
               ),
             ],
@@ -158,12 +158,12 @@ class _CartPageState extends State<CartPage> {
             children: [
               Text(
                 'Total',
-                style: textTheme.headline6,
+                style: _textTheme.headline6,
                 strutStyle: StrutStyle(fontSize: 24),
               ),
               Text(
                 currency.format(_getTotalPrice()),
-                style: textTheme.headline6,
+                style: _textTheme.headline6,
                 strutStyle: StrutStyle(fontSize: 24),
               ),
             ],

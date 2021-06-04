@@ -41,41 +41,46 @@ class FavoriteFood extends StatelessWidget {
   Widget _buildFavoriteFoodItem(BuildContext context, Food food) {
     return GestureDetector(
       onTap: () => _moveToDetailPage(context, food),
-      child: Container(
-        decoration: cardDecoration,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(cardRadius),
-                  topRight: Radius.circular(cardRadius),
-                ),
-                child: SizedBox(
-                  width: favoriteCardWidth,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: -30,
-                        left: -70,
-                        child: SizedBox(
-                          height: (favoriteCardHeight / 3) * 2 + 30,
-                          width: favoriteCardWidth + 70,
-                          child: Image.asset(
-                            food.imageUrl,
-                            fit: BoxFit.fitHeight,
+      child: Hero(
+        tag: food.id,
+        child: Material(
+          child: Container(
+            decoration: cardDecoration,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  flex: 2,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(cardRadius),
+                      topRight: Radius.circular(cardRadius),
+                    ),
+                    child: SizedBox(
+                      width: favoriteCardWidth,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            top: -30,
+                            left: -70,
+                            child: SizedBox(
+                              height: (favoriteCardHeight / 3) * 2 + 30,
+                              width: favoriteCardWidth + 70,
+                              child: Image.asset(
+                                food.imageUrl,
+                                fit: BoxFit.fitHeight,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                _buildFavoriteFoodInfo(food),
+              ],
             ),
-            _buildFavoriteFoodInfo(food),
-          ],
+          ),
         ),
       ),
     );

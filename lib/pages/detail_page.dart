@@ -4,7 +4,6 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
 import '../models/food.dart';
-import '../models/food_size.dart';
 import '../themes/app_color.dart';
 import '../themes/app_decoration.dart';
 import '../themes/app_text_style.dart';
@@ -35,9 +34,12 @@ class _DetailPageState extends State<DetailPage> {
           children: <Widget>[
             AspectRatio(
               aspectRatio: 1 / 1,
-              child: Image.asset(
-                widget.food.imageUrl,
-                fit: BoxFit.cover,
+              child: Hero(
+                tag: widget.food.id,
+                child: Image.asset(
+                  widget.food.imageUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             _buildFoodInfo(),
